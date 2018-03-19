@@ -37,26 +37,36 @@ public class UpgradeButtons : MonoBehaviour
                     upgradeScreen.SetActive(true);
                     player.GetComponent<CharacterMOV>().menu = true;
                 }
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    upgradeScreen.SetActive(false);
+                    player.GetComponent<CharacterMOV>().menu = false;
+                }
             }
         }
     }
 
     public void DamageUpgradeButton()
     {
-        turret.GetComponent<Turret>().damageUpgrade[damI].SetActive(true);
-        player.GetComponent<CharacterMOV>().menu = false;
-        upgradeScreen.SetActive(false);
-        Debug.Log("Laat player weer lopen.");
-
-        turret.SetActive(false);
-        Debug.Log("Zet lvl1 uit");
+        if (player.GetComponent<Player>().totalGold >= turret.GetComponent<Turret>().damageUpgradeCost)
+        {
+            player.GetComponent<Player>().totalGold -= turret.GetComponent<Turret>().damageUpgradeCost;
+            turret.GetComponent<Turret>().damageUpgrade[damI].SetActive(true);
+            player.GetComponent<CharacterMOV>().menu = false;
+            upgradeScreen.SetActive(false);
+            turret.SetActive(false);
+        }
     }
     public void SpeedUpgradeButton()
     {
-        turret.GetComponent<Turret>().speedUpgrade[speedI].SetActive(true);
-        player.GetComponent<CharacterMOV>().menu = false;
-        upgradeScreen.SetActive(false);
+        if(player.GetComponent<Player>().totalGold >= turret.GetComponent<Turret>().speedUpgradeCost)
+        {
+            player.GetComponent<Player>().totalGold -= turret.GetComponent<Turret>().speedUpgradeCost;
+            turret.GetComponent<Turret>().speedUpgrade[speedI].SetActive(true);
+            player.GetComponent<CharacterMOV>().menu = false;
+            upgradeScreen.SetActive(false);
 
-        turret.gameObject.SetActive(false);
+            turret.gameObject.SetActive(false);
+        }
     }
 }

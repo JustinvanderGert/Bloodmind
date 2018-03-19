@@ -10,12 +10,12 @@ public class CharacterMOV : MonoBehaviour
     public float rotationSpeed = 10;
     public float verticalRotation = 0;
     public float upDownRange = 60;
-
-    public CursorLockMode cursorLock;
+    
     public bool menu;
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
@@ -24,12 +24,12 @@ public class CharacterMOV : MonoBehaviour
         if (!menu)
         {
             Cursor.visible = false;
-            cursorLock = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.Locked;
         }
         else if (menu)
         {
             Cursor.visible = true;
-            cursorLock = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 

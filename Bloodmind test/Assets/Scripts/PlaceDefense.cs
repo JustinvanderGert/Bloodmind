@@ -7,12 +7,14 @@ public class PlaceDefense : MonoBehaviour
     public List<GameObject> placeableDefenses = new List<GameObject>();
     public List<GameObject> placedDefenses = new List<GameObject>();
     public List<GameObject> leveledDefenses = new List<GameObject>();
-    GameObject player;
     GameObject visibleDefense;
-    public int i;
+    GameObject player;
     bool spawned;
 
+    public GameObject turret;
     public float range;
+    public int i;
+
 
     void Start()
     {
@@ -27,8 +29,9 @@ public class PlaceDefense : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3)) { i = 2; }
         if (Input.GetKeyDown(KeyCode.Alpha4)) { i = 3; }
 
-        float distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
-        if (distance <= range)
+        float distancePlayer = Vector3.Distance(gameObject.transform.position, player.transform.position);
+
+        if (distancePlayer <= range)
         {
             if (!spawned)
             {
@@ -41,22 +44,17 @@ public class PlaceDefense : MonoBehaviour
                         placeableDefenses[a].SetActive(false);
                     }
                 }
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) && i != 0 && turret.GetComponent<Turret>().cost <= player.GetComponent<Player>().totalGold)
                 {
                     placeableDefenses[i].SetActive(false);
                     placedDefenses[i].SetActive(true);
                     player.GetComponent<UpgradeButtons>().turrets.Add(placedDefenses[i].gameObject);
+                    player.GetComponent<Player>().totalGold -= turret.GetComponent<Turret>().cost;
                     spawned = true;
                 }
             }
-
-            /*if (Input.GetKeyDown(KeyCode.E) && spawned)
-            {
-                leveledDefenses[i].SetActive(true);
-                placedDefenses[i].SetActive(false);
-            }*/
         }
-        else if (distance >= range)
+        else if (distancePlayer >= range)
         {
             placeableDefenses[i].SetActive(false);
         }

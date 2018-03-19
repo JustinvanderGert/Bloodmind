@@ -24,13 +24,14 @@ public class PlaceResources : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) { i = 0; }
         if (Input.GetKeyDown(KeyCode.Alpha2)) { i = 1; }
+        if (Input.GetKeyDown(KeyCode.Alpha3)) { i = 2; }
 
         float distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
         if (distance <= range)
         {
             if (!spawned)
-            {
+            {/*
                 placeableResources[i].SetActive(true);
                 if (i == 0)
                 {
@@ -40,19 +41,30 @@ public class PlaceResources : MonoBehaviour
                 {
                     placeableResources[0].SetActive(false);
                 }
-            }
 
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                placeableResources[i].SetActive(false);
-                placedResources[i].SetActive(true);
-                spawned = true;
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    placeableResources[i].SetActive(false);
+                    placedResources[i].SetActive(true);
+                    spawned = true;
+                }*/
+
+                placeableResources[i].SetActive(true);
+
+                for (int a = 0; a < placeableResources.Count; a++)
+                {
+                    if (a != i)
+                    {
+                        placeableResources[a].SetActive(false);
+                    }
+                }
+                if (Input.GetKeyDown(KeyCode.E) && i != 0)
+                {
+                    placeableResources[i].SetActive(false);
+                    placedResources[i].SetActive(true);
+                    spawned = true;
+                }
             }
-            /*if (Input.GetKeyDown(KeyCode.E))
-            {
-                leveledResources[i].SetActive(true);
-                placedResources[i].SetActive(false);
-            }*/
         }
         else if (distance >= range)
         {

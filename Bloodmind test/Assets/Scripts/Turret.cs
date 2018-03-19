@@ -11,24 +11,20 @@ public class Turret : MonoBehaviour
 
     public Transform bulletPoint;
     public GameObject bullet;
-    public GameObject lvl2;
 
-    public float upgradeCost;
+    public float damageUpgradeCost;
+    public float speedUpgradeCost;
     public float reloadTime;
     public float range;
     public float speed;
     public float cost;
     
     GameObject currentTarget;
-    GameObject player;
     Coroutine a;
     bool shot;
 
     void Start ()
     {
-        //upgradeScreen = GameObject.FindGameObjectWithTag("TurretUpgradeScreen");
-        //upgradeScreen.SetActive(false);
-        player = GameObject.FindGameObjectWithTag("Player");
         shot = false;
 	}
 
@@ -49,8 +45,6 @@ public class Turret : MonoBehaviour
 
     void Update()
     {
-        float distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
-
         for (int a = 0; a < target.Count; a++)
         {
             if (target[a].GetComponent<Enemy>().enemyHealth <= 0)
@@ -59,11 +53,6 @@ public class Turret : MonoBehaviour
             }
         }
 
-        /*if (distance <= range && Input.GetKeyDown(KeyCode.E))
-        {
-            player.GetComponent<CharacterMOV>().menu = true;
-            upgradeScreen.SetActive(true);
-        }*/
         if (target.Count > 0)
         {
             currentTarget = target[0];

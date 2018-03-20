@@ -51,6 +51,10 @@ public class Turret : MonoBehaviour
             {
                 target.Remove(target[a]);
             }
+            if (target[a] == null)
+            {
+                target.Remove(target[a]);
+            }
         }
 
         if (target.Count > 0)
@@ -61,6 +65,7 @@ public class Turret : MonoBehaviour
             newDir.y = 0;
             transform.rotation = Quaternion.LookRotation(newDir);
         }
+
         if (!shot & target.Count > 0)
         {
             a = StartCoroutine(Shoot());
@@ -70,7 +75,7 @@ public class Turret : MonoBehaviour
         {
             target.Remove(currentTarget.gameObject);
         }
-        if(target == null)
+        if (target.Count <= 0)
         {
             StopCoroutine(a);
             shot = false;

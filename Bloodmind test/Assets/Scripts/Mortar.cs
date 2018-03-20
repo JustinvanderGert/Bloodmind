@@ -43,6 +43,10 @@ public class Mortar : MonoBehaviour
             {
                 target.Remove(target[a]);
             }
+            if(target[a] == null)
+            {
+                target.Remove(target[a]);
+            }
         }
 
         if (target.Count > 0)

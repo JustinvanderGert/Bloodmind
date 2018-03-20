@@ -24,7 +24,7 @@ public class HomeBase : MonoBehaviour
         if(other.gameObject.tag == "Enemy")
         {
             baseHealth--;
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Enemy>().enemyHealth = 0;
         }
     }
 }

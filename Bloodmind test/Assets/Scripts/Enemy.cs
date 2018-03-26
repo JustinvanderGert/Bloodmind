@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     NavMeshAgent agent;
 
     public int enemyHealth;
-    //public float speed;
 
 	void Start ()
     {
@@ -20,8 +19,7 @@ public class Enemy : MonoBehaviour
 	void Update ()
     {
         agent.SetDestination(waypoint.transform.position);
-
-        //gameObject.transform.Translate(0, 0, -speed);
+        
         if (enemyHealth <= 0)
         {
             Destroy(gameObject);

@@ -4,27 +4,37 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemy;
-    bool spawned;
+    public List<GameObject> enemy = new List<GameObject>();
+    bool spawning;
+    int i;
 
 	void Start ()
     {
-        spawned = false;
+        spawning = false;
 	}
 	
 	void Update () 
     {
-        if (!spawned)
+        if (!spawning)
         {
             StartCoroutine(Spawner());
-            spawned = true;
+            spawning = true;
         }
 	}
 
     public IEnumerator Spawner()
     {
         yield return new WaitForSeconds(5);
-        Instantiate(enemy, gameObject.transform.position, gameObject.transform.rotation);
-        spawned = false;
+        Instantiate(enemy[i], gameObject.transform.position, gameObject.transform.rotation);
+        ResetSpawner();
+    }
+
+    public void ResetSpawner()
+    {
+        if (i != enemy.Count)
+        {
+            i++;
+            spawning = false;
+        }else if(i == enemy.Count) { i = 0; spawning = false; }
     }
 }

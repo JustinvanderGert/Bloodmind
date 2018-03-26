@@ -29,26 +29,9 @@ public class PlaceResources : MonoBehaviour
         float distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
         if (distance <= range)
-        {
+        {/*
             if (!spawned)
-            {/*
-                placeableResources[i].SetActive(true);
-                if (i == 0)
-                {
-                    placeableResources[1].SetActive(false);
-                }
-                else if (i == 1)
-                {
-                    placeableResources[0].SetActive(false);
-                }
-
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    placeableResources[i].SetActive(false);
-                    placedResources[i].SetActive(true);
-                    spawned = true;
-                }*/
-
+            {
                 placeableResources[i].SetActive(true);
 
                 for (int a = 0; a < placeableResources.Count; a++)
@@ -69,6 +52,7 @@ public class PlaceResources : MonoBehaviour
         else if (distance >= range)
         {
             placeableResources[i].SetActive(false);
+        }*/
         }
     }
 }

@@ -31,10 +31,10 @@ public class EnemySpawner : MonoBehaviour
 
     public void ResetSpawner()
     {
-        if (i != enemy.Count)
+        if (i < enemy.Count)
         {
             i++;
             spawning = false;
-        }else if(i == enemy.Count) { i = 0; spawning = false; }
+        }else if(i >= enemy.Count) { i = 0; spawning = false; }
     }
 }

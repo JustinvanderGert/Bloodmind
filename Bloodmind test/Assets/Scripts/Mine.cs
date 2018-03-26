@@ -23,7 +23,7 @@ public class Mine : MonoBehaviour
         float distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
         if(storedGold <= storedCapacity)
         {
-            storedGold++;
+            storedGold += 1 * speed;
         }
         if (distance <= range)
         {

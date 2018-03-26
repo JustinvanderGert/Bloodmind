@@ -29,6 +29,11 @@ public class MiniMortarBullet : MonoBehaviour
             other.gameObject.GetComponent<Enemy>().enemyHealth--;
             Destroy(gameObject);
         }
+        if (other.gameObject.tag == "Heavy_Enemy")
+        {
+            other.gameObject.GetComponent<Enemy>().enemyHealth--;
+            Destroy(gameObject);
+        }
         if (other.gameObject.tag == "Ground")
         {
             Destroy(gameObject);

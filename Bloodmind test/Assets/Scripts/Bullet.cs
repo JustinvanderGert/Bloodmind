@@ -24,6 +24,11 @@ public class Bullet : MonoBehaviour
             other.gameObject.GetComponent<Enemy>().enemyHealth -= damage;
             Destroy(gameObject);
         }
+        if (other.gameObject.tag == "Heavy_Enemy")
+        {
+            other.gameObject.GetComponent<Enemy>().enemyHealth -= damage;
+            Destroy(gameObject);
+        }
     }
 
     public IEnumerator DestroyBullet()

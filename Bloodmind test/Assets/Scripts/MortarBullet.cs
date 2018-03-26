@@ -58,7 +58,12 @@ public class MortarBullet : MonoBehaviour
             other.gameObject.GetComponent<Enemy>().enemyHealth--;
             Destroy(gameObject);
         }
-         else if (other.gameObject.tag == "Ground")
+        if (other.gameObject.tag == "Heavy_Enemy")
+        {
+            other.gameObject.GetComponent<Enemy>().enemyHealth--;
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.tag == "Ground")
         {
             Destroy(gameObject);
         }

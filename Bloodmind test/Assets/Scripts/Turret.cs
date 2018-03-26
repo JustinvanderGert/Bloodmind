@@ -34,10 +34,18 @@ public class Turret : MonoBehaviour
         {
             target.Add(other.gameObject);
         }
+        if (other.gameObject.tag == "Heavy_Enemy")
+        {
+            target.Add(other.gameObject);
+        }
     }
     public void OnTriggerExit(Collider other)
     {
         if(other.gameObject.tag == "Enemy")
+        {
+            target.Remove(other.gameObject);
+        }
+        if (other.gameObject.tag == "Heavy_Enemy")
         {
             target.Remove(other.gameObject);
         }

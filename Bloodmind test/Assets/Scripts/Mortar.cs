@@ -26,10 +26,18 @@ public class Mortar : MonoBehaviour
         {
             target.Add(other.gameObject);
         }
+        if (other.gameObject.tag == "Heavy_Enemy")
+        {
+            target.Add(other.gameObject);
+        }
     }
     public void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
+        {
+            target.Remove(other.gameObject);
+        }
+        if (other.gameObject.tag == "Heavy_Enemy")
         {
             target.Remove(other.gameObject);
         }
@@ -53,9 +61,9 @@ public class Mortar : MonoBehaviour
         {
             currentTarget = target[0];
             Vector3 targetDir = currentTarget.transform.position - transform.position;
-            Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, speed * Time.deltaTime, 0.0F);
+            Vector3 newDir = Vector3.RotateTowards(-transform.forward, targetDir, speed * Time.deltaTime, 0.0F);
             newDir.y = 0;
-            transform.rotation = Quaternion.LookRotation(newDir);
+            transform.rotation = Quaternion.LookRotation(-newDir);
         }
 
         if (!shot & target.Count > 0)

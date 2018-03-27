@@ -133,10 +133,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 49
+  controlID: 119
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 50
+  controlID: 10
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 51
+  controlID: 11
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -394,21 +394,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 4e0be5ff180ce5ff820de5ffca83e6ffa484e6ff0e86e6ff308ee6ffa88fe6ff2291e6ff16fde6ffaafde6ff14ffe6ff5040ebfff632f3fff832f3fffa32f3ff4849f7ff888cf9ffb2fef9ffc0fef9ff3857faffca57faff3459faffbcd2ffff74d3ffffe2d4ffff1afcffff0000000014430000a8460000724700003c4a0000dccc000046ce0000c8d0000002d3000008d600004eb80c0060db0c00fedc0c00
+    m_ExpandedIDs: f6e2e4ffb8e3e4ff22e5e4ff24e8e4ffb6bfe8ffd6eaedff023df0ffc042f0ff52e7f6ffa087f7ff30d0f8ff3ad0f8ffea9cfeff869dfefff09efeff1afcffff00000000a23600002e0e0100f8130100421e01001c2b01000c30010004410100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Trebuchet
-      m_OriginalName: Trebuchet
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -570556
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
@@ -444,14 +444,14 @@ MonoBehaviour:
     width: 1243
     height: 650
   m_SceneLighting: 1
-  lastFramingTime: 9907.358028671233
+  lastFramingTime: 10173.396429716238
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 45.692944, y: 0.24557114, z: 27.035728}
+    m_Target: {x: 50.25216, y: 2.1139736, z: 20.950848}
     speed: 2
-    m_Value: {x: 45.692944, y: 0.24557114, z: 27.035728}
+    m_Value: {x: 50.25216, y: 2.1139736, z: 20.950848}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -474,13 +474,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.11200502, y: 0.6746664, z: -0.10465761, w: -0.7220298}
+    m_Target: {x: 0.10600491, y: -0.38975313, z: 0.045212198, w: 0.9136802}
     speed: 2
-    m_Value: {x: -0.11200502, y: 0.6746664, z: -0.10465761, w: -0.7220298}
+    m_Value: {x: 0.106004894, y: -0.38975307, z: 0.045212194, w: 0.9136801}
   m_Size:
-    m_Target: 39.450157
+    m_Target: 19.603674
     speed: 2
-    m_Value: 39.450157
+    m_Value: 19.603674
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -555,19 +555,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Materials
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Github\BloodmindGithub\Bloodmind test
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 90280000
-    m_LastClickedID: 10384
-    m_ExpandedIDs: 00000000b2260000dc37000000ca9a3bffffff7f
+    m_SelectedIDs: b2260000
+    m_LastClickedID: 9906
+    m_ExpandedIDs: 00000000b22600008c2800002a42000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -595,7 +595,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b2260000dc370000
+    m_ExpandedIDs: 00000000b22600002a420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

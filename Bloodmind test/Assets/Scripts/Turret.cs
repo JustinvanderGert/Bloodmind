@@ -10,6 +10,7 @@ public class Turret : MonoBehaviour
     public List<GameObject> target = new List<GameObject>();
 
     public Transform bulletPoint;
+    public Transform bulletPoint2;
     public GameObject bullet;
 
     public float damageUpgradeCost;
@@ -22,6 +23,7 @@ public class Turret : MonoBehaviour
     GameObject currentTarget;
     Coroutine a;
     bool shot;
+    bool coroutineIsRunning = false;
 
     void Start ()
     {
@@ -83,7 +85,7 @@ public class Turret : MonoBehaviour
         {
             target.Remove(currentTarget.gameObject);
         }
-        if (target.Count <= 0)
+        if (target.Count <= 0 && coroutineIsRunning)
         {
             StopCoroutine(a);
             shot = false;
@@ -93,9 +95,15 @@ public class Turret : MonoBehaviour
 
     public IEnumerator Shoot()
     {
+        coroutineIsRunning = true;
         yield return new WaitForSeconds(reloadTime);
 
         Instantiate(bullet, bulletPoint.transform.position, bulletPoint.transform.rotation);
+        if (bulletPoint2 != null)
+        {
+            Instantiate(bullet, bulletPoint2.transform.position, bulletPoint.transform.rotation);
+        }
         shot = false;
+        coroutineIsRunning = false;
     }
 }

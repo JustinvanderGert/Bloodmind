@@ -12,8 +12,6 @@ public class UpgradeButtons : MonoBehaviour
     GameObject player;
 
     public int i = 0;
-    int damI = 0;
-    int speedI = 0;
 
     void Start ()
     {
@@ -51,10 +49,13 @@ public class UpgradeButtons : MonoBehaviour
         if (player.GetComponent<Player>().totalGold >= turret.GetComponent<Turret>().damageUpgradeCost)
         {
             player.GetComponent<Player>().totalGold -= turret.GetComponent<Turret>().damageUpgradeCost;
-            turret.GetComponent<Turret>().damageUpgrade[damI].SetActive(true);
+            turret.GetComponent<Turret>().damageUpgrade[0].SetActive(true);
             player.GetComponent<CharacterMOV>().menu = false;
             upgradeScreen.SetActive(false);
+
             turret.SetActive(false);
+            player.GetComponent<UpgradeButtons>().turrets.Add(turret.GetComponent<Turret>().damageUpgrade[0].gameObject);
+            player.GetComponent<UpgradeButtons>().turrets.Remove(turret.gameObject);
         }
     }
     public void SpeedUpgradeButton()
@@ -62,9 +63,12 @@ public class UpgradeButtons : MonoBehaviour
         if(player.GetComponent<Player>().totalGold >= turret.GetComponent<Turret>().speedUpgradeCost)
         {
             player.GetComponent<Player>().totalGold -= turret.GetComponent<Turret>().speedUpgradeCost;
-            turret.GetComponent<Turret>().speedUpgrade[speedI].SetActive(true);
+            turret.GetComponent<Turret>().speedUpgrade[0].SetActive(true);
             player.GetComponent<CharacterMOV>().menu = false;
             upgradeScreen.SetActive(false);
+
+            player.GetComponent<UpgradeButtons>().turrets.Add(turret.GetComponent<Turret>().speedUpgrade[0].gameObject);
+            player.GetComponent<UpgradeButtons>().turrets.Remove(turret.gameObject);
 
             turret.gameObject.SetActive(false);
         }

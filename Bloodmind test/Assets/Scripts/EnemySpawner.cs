@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public List<GameObject> enemy = new List<GameObject>();
+    public GameObject victoryScreen;
     bool spawning;
     int i;
 
@@ -25,16 +26,17 @@ public class EnemySpawner : MonoBehaviour
     public IEnumerator Spawner()
     {
         yield return new WaitForSeconds(5);
-        Instantiate(enemy[i], gameObject.transform.position, gameObject.transform.rotation);
-        ResetSpawner();
-    }
 
-    public void ResetSpawner()
-    {
         if (i < enemy.Count)
         {
+            Instantiate(enemy[i], gameObject.transform.position, gameObject.transform.rotation);
             i++;
             spawning = false;
-        }else if(i >= enemy.Count) { i = 0; spawning = false; }
+        }
+        else if (i >= enemy.Count)
+        {
+            victoryScreen.SetActive(true);
+            spawning = false;
+        }
     }
 }

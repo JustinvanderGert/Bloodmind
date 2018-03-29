@@ -57,11 +57,11 @@ public class Turret : MonoBehaviour
     {
         for (int a = 0; a < target.Count; a++)
         {
-            if (target[a].GetComponent<Enemy>().enemyHealth <= 0)
+            if (target[a] == null)
             {
                 target.Remove(target[a]);
             }
-            if (target[a] == null)
+            if (target[a].GetComponent<Enemy>().enemyHealth <= 0)
             {
                 target.Remove(target[a]);
             }

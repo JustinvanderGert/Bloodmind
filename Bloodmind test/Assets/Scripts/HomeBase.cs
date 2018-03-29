@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HomeBase : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class HomeBase : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
             gameOverScreen.SetActive(true);
+            SceneManager.LoadScene("Instructions");
             Debug.Log("Game Over");
         }
 	}

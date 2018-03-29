@@ -40,8 +40,8 @@ MonoBehaviour:
     y: 0
     width: 1083
     height: 671
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -70,7 +70,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &4
 MonoBehaviour:
@@ -133,10 +133,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 492}
+  m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 9
+  controlID: 109
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,10 +157,10 @@ MonoBehaviour:
     y: 0
     width: 1386
     height: 947
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 10
+  controlID: 38
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -181,10 +181,10 @@ MonoBehaviour:
     y: 0
     width: 1386
     height: 671
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 11
+  controlID: 39
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -203,8 +203,8 @@ MonoBehaviour:
     y: 0
     width: 303
     height: 671
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -284,9 +284,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1598
+    x: 1388
     y: 92
-    width: 322
+    width: 532
     height: 926
 --- !u!114 &13
 MonoBehaviour:
@@ -316,7 +316,7 @@ MonoBehaviour:
     height: 650
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
-  m_Stats: 0
+  m_Stats: 1
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
@@ -394,7 +394,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: e6c8f3ff92cff3ff48d0f3ff0230f4ff0a30f4ffe64ef4ff664ff4ff1caff4ff20aff4ff88bef4ff08bff4ffbe1ef5ffc21ef5ffa840f5ff2841f5ffdea0f5ffe2a0f5ffd2a8f5ff52a9f5ff0209f6ff0609f6ff8e16f6ff421ef6ff041ff6ff7a20f6ff8420f6ff6a82f6ff70edf6ffd84cf7ff164ef7ff06bcf7ff0a2df8ff3c9ef8ff749ff8ffaaabf8ff4c1cf9ffe6a7f9ff78e9f9ff844ffaffba81faffca8cfaff8c8dfaffde8efaff42edfaff18abfeff00b1feff1afcffff00000000b4650100c866010068670100be5903006cbb030016be0300c0c003006ac30300
+    m_ExpandedIDs: ec68faff8069fafff26afafff86afaff783bffff1afcffff00000000de350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -444,14 +444,14 @@ MonoBehaviour:
     width: 1079
     height: 650
   m_SceneLighting: 1
-  lastFramingTime: 4736.47172534663
+  lastFramingTime: 2448.940353899491
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 539.5, y: 316.7187, z: 0}
+    m_Target: {x: 65.914505, y: 5.8698487, z: 79.18678}
     speed: 2
-    m_Value: {x: 539.5, y: 316.7187, z: 0}
+    m_Value: {x: 65.914505, y: 5.8698487, z: 79.18678}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -474,13 +474,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: 0.07470519, y: -0.89783406, z: 0.16755618, w: 0.40030068}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0.074705094, y: -0.8978329, z: 0.16755596, w: 0.40030015}
   m_Size:
-    m_Target: 1086.0424
+    m_Target: 8.261401
     speed: 2
-    m_Value: 1086.0424
+    m_Value: 8.261401
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -555,19 +555,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scene
+    - Assets/Objects/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scene
+  - Assets/Objects/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Github\BloodmindGithub\Bloodmind test
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 18}
-    m_SelectedIDs: 682e0000
-    m_LastClickedID: 11880
-    m_ExpandedIDs: 00000000b226000084280000a42a0000003400006444000000ca9a3bffffff7f
+    m_SelectedIDs: 86280000
+    m_LastClickedID: 10374
+    m_ExpandedIDs: 00000000b426000086280000a82a0000063400006c44000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -595,7 +595,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b2260000a42a000064440000
+    m_ExpandedIDs: 00000000b426000086280000a82a0000063400006c440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

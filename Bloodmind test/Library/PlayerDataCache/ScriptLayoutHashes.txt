@@ -132,6 +132,7 @@ a90e94673f50d2237c1b971c138660c6 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.ForcedReset
 57fde8e76fc7bce23deb0e799d336be7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.SmoothFollow
 cfa93710d56cd4da2a3b2eec27bc1139 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.PlanarReflection
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InstructionScreen
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.Displace
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.MobileControlRig
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.ObjectResetter
@@ -181,4 +182,3 @@ b795acd096c6d1f8de924fc602474ee5 Assembly-CSharp.dll:.MortarBullet
 8b2bf5d246cd6356ee97e2fab26c806d Assembly-CSharp.dll:.Enemy
 c78dfc4c731859771ba3b6402e8c01bc Assembly-CSharp.dll:.Player
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InstructionScreen

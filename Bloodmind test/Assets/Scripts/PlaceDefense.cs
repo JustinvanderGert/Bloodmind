@@ -36,6 +36,7 @@ public class PlaceDefense : MonoBehaviour
             if (!spawned)
             {
                 placeableDefenses[i].SetActive(true);
+                turret = placedDefenses[i];
 
                 for (int a = 0; a < placeableDefenses.Count; a++)
                 {
@@ -44,12 +45,12 @@ public class PlaceDefense : MonoBehaviour
                         placeableDefenses[a].SetActive(false);
                     }
                 }
-                if (Input.GetKeyDown(KeyCode.E) && i != 0 && turret.GetComponent<Turret>().cost <= player.GetComponent<Player>().totalGold)
+                if (Input.GetKeyDown(KeyCode.E) && i != 0 && turret.GetComponent<Price>().purchasePrice <= player.GetComponent<Player>().totalGold)
                 {
                     placeableDefenses[i].SetActive(false);
                     placedDefenses[i].SetActive(true);
                     player.GetComponent<UpgradeButtons>().turrets.Add(placedDefenses[i].gameObject);
-                    player.GetComponent<Player>().totalGold -= turret.GetComponent<Turret>().cost;
+                    player.GetComponent<Player>().totalGold -= turret.GetComponent<Price>().purchasePrice;
                     spawned = true;
                 }
             }

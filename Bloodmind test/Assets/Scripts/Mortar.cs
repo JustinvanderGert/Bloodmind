@@ -10,10 +10,10 @@ public class Mortar : MonoBehaviour
     public GameObject shotBullet;
 
     public float speed;
-    public float cost;
     public Coroutine a;
     public GameObject currentTarget;
     bool shot;
+    bool coroutineIsRunning = false;
 
     void Start()
     {
@@ -75,7 +75,7 @@ public class Mortar : MonoBehaviour
         {
             target.Remove(currentTarget.gameObject);
         }
-        if (target.Count <= 0)
+        if (target.Count <= 0 && coroutineIsRunning)
         {
             StopCoroutine(a);
             shotBullet = null;
@@ -86,10 +86,12 @@ public class Mortar : MonoBehaviour
 
     public IEnumerator Shoot()
     {
+        coroutineIsRunning = true;
         yield return new WaitForSeconds(2);
 
         shotBullet = Instantiate(bullet, bulletPoint.transform.position, bulletPoint.transform.rotation);
         shotBullet.GetComponent<MortarBullet>().target = currentTarget;
         shot = false;
+        coroutineIsRunning = false;
     }
 }

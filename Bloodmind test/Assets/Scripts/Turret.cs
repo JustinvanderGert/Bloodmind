@@ -12,13 +12,11 @@ public class Turret : MonoBehaviour
     public Transform bulletPoint;
     public Transform bulletPoint2;
     public GameObject bullet;
-
-    public float damageUpgradeCost;
-    public float speedUpgradeCost;
+    public GameObject rotatingPart;
+    
     public float reloadTime;
     public float range;
     public float speed;
-    public float cost;
     
     GameObject currentTarget;
     Coroutine a;
@@ -74,6 +72,7 @@ public class Turret : MonoBehaviour
             Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, speed * Time.deltaTime, 0.0F);
             newDir.y = 0;
             transform.rotation = Quaternion.LookRotation(newDir);
+            rotatingPart.transform.LookAt(target[0].transform);
         }
 
         if (!shot & target.Count > 0)

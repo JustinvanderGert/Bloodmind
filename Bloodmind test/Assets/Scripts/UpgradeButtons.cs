@@ -46,9 +46,9 @@ public class UpgradeButtons : MonoBehaviour
 
     public void DamageUpgradeButton()
     {
-        if (player.GetComponent<Player>().totalGold >= turret.GetComponent<Turret>().damageUpgradeCost)
+        if (player.GetComponent<Player>().totalGold >= turret.GetComponent<Price>().damageUpgradeCost)
         {
-            player.GetComponent<Player>().totalGold -= turret.GetComponent<Turret>().damageUpgradeCost;
+            player.GetComponent<Player>().totalGold -= turret.GetComponent<Price>().damageUpgradeCost;
             turret.GetComponent<Turret>().damageUpgrade[0].SetActive(true);
             player.GetComponent<CharacterMOV>().menu = false;
             upgradeScreen.SetActive(false);
@@ -60,9 +60,9 @@ public class UpgradeButtons : MonoBehaviour
     }
     public void SpeedUpgradeButton()
     {
-        if(player.GetComponent<Player>().totalGold >= turret.GetComponent<Turret>().speedUpgradeCost)
+        if(player.GetComponent<Player>().totalGold >= turret.GetComponent<Price>().speedUpgradeCost)
         {
-            player.GetComponent<Player>().totalGold -= turret.GetComponent<Turret>().speedUpgradeCost;
+            player.GetComponent<Player>().totalGold -= turret.GetComponent<Price>().speedUpgradeCost;
             turret.GetComponent<Turret>().speedUpgrade[0].SetActive(true);
             player.GetComponent<CharacterMOV>().menu = false;
             upgradeScreen.SetActive(false);

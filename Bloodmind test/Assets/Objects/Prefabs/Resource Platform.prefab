@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33243863764365400}
   - component: {fileID: 65710166425844644}
   - component: {fileID: 23574952588342904}
-  - component: {fileID: 114452118192231740}
   m_Layer: 0
   m_Name: Resource Platform
   m_TagString: Untagged
@@ -214,21 +213,3 @@ MonoBehaviour:
   mineContent: {fileID: 0}
   speed: 1
   range: 8
---- !u!114 &114452118192231740
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1082169008898418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 479c8d0b412b5604a9b8b3e1875a4238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placeableResources:
-  - {fileID: 1235742907240336, guid: 90996687a89734941a338d99d7e4dfb5, type: 2}
-  placedResources:
-  - {fileID: 1235742907240336, guid: 90996687a89734941a338d99d7e4dfb5, type: 2}
-  leveledResources: []
-  range: 5
-  i: 0

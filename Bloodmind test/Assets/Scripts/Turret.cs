@@ -13,6 +13,7 @@ public class Turret : MonoBehaviour
     public Transform bulletPoint2;
     public GameObject bullet;
     public GameObject rotatingPart;
+    public GameObject aimingPart;
     
     public float reloadTime;
     public float range;
@@ -68,11 +69,11 @@ public class Turret : MonoBehaviour
         if (target.Count > 0)
         {
             currentTarget = target[0];
-            Vector3 targetDir = currentTarget.transform.position - transform.position;
-            Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, speed * Time.deltaTime, 0.0F);
-            newDir.y = 0;
-            transform.rotation = Quaternion.LookRotation(newDir);
-            rotatingPart.transform.LookAt(target[0].transform);
+
+            Vector3 targetPostition = new Vector3(currentTarget.transform.position.x, rotatingPart.transform.position.y, currentTarget.transform.position.z);
+            rotatingPart.transform.LookAt(targetPostition);
+
+            aimingPart.transform.LookAt(currentTarget.transform);
         }
 
         if (!shot & target.Count > 0)

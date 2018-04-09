@@ -6,9 +6,10 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public GameObject waypoint;
+    public GameObject researchMaterials;
     NavMeshAgent agent;
 
-    public int enemyHealth;
+    public float enemyHealth;
 
 	void Start ()
     {
@@ -22,6 +23,12 @@ public class Enemy : MonoBehaviour
         
         if (enemyHealth <= 0)
         {
+            int i;
+            i = Random.Range(0, 20);
+            if(i == 1)
+            {
+                Instantiate(researchMaterials, gameObject.transform.position, gameObject.transform.rotation);
+            }
             Destroy(gameObject);
         }
 	}

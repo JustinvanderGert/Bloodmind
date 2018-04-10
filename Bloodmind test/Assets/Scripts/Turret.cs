@@ -24,6 +24,8 @@ public class Turret : MonoBehaviour
     bool shot;
     bool coroutineIsRunning = false;
 
+    GameObject whereToAim;
+
     void Start ()
     {
         shot = false;
@@ -69,8 +71,9 @@ public class Turret : MonoBehaviour
         if (target.Count > 0)
         {
             currentTarget = target[0];
+            whereToAim = currentTarget.GetComponent<Enemy>().aimPoint;
 
-            Vector3 targetPostition = new Vector3(currentTarget.transform.position.x, rotatingPart.transform.position.y, currentTarget.transform.position.z);
+            Vector3 targetPostition = new Vector3(aimingPart.transform.position.x, rotatingPart.transform.position.y, aimingPart.transform.position.z);
             rotatingPart.transform.LookAt(targetPostition);
 
             aimingPart.transform.LookAt(currentTarget.transform);

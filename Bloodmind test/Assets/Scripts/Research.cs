@@ -18,7 +18,7 @@ public class Research : MonoBehaviour
         if (isHolding)
         {
             transform.position = holdPoint.transform.position;
-            player.GetComponentInChildren<Flamethrower>()
+            player.GetComponentInChildren<Flamethrower>();
         }
 	}
 

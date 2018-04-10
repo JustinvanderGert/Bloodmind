@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public GameObject waypoint;
     public GameObject researchMaterials;
+    public GameObject aimPoint;
     NavMeshAgent agent;
 
     public float enemyHealth;

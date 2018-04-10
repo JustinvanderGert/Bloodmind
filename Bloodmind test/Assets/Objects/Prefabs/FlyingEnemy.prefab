@@ -684,7 +684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 0}
-  researchMaterials: {fileID: 0}
+  researchMaterials: {fileID: 1891820618305510, guid: 086d10671fb9afe479030f9f14d33cf9,
+    type: 2}
   aimPoint: {fileID: 1684947621996416}
   enemyHealth: 5
 --- !u!135 &135358287773692428

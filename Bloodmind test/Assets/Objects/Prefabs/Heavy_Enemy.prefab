@@ -1354,8 +1354,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 0}
-  researchMaterials: {fileID: 0}
-  aimPoint: {fileID: 0}
+  researchMaterials: {fileID: 1891820618305510, guid: 086d10671fb9afe479030f9f14d33cf9,
+    type: 2}
+  aimPoint: {fileID: 1438285924687382}
   enemyHealth: 25
 --- !u!135 &135167455617437684
 SphereCollider:

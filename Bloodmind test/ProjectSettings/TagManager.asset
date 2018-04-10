@@ -11,6 +11,9 @@ TagManager:
   - TurretUpgradeScreen
   - Waypoint
   - Heavy_Enemy
+  - Flamethrower
+  - Research_Materials
+  - Research_Station
   layers:
   - Default
   - TransparentFX

@@ -407,6 +407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 0}
+  researchMaterials: {fileID: 1891820618305510, guid: 086d10671fb9afe479030f9f14d33cf9,
+    type: 2}
+  aimPoint: {fileID: 0}
   enemyHealth: 2
 --- !u!114 &114209634712138488
 MonoBehaviour:
@@ -420,6 +423,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 0}
+  researchMaterials: {fileID: 1891820618305510, guid: 086d10671fb9afe479030f9f14d33cf9,
+    type: 2}
+  aimPoint: {fileID: 0}
   enemyHealth: 2
 --- !u!114 &114269197613300414
 MonoBehaviour:
@@ -433,6 +439,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 0}
+  researchMaterials: {fileID: 1891820618305510, guid: 086d10671fb9afe479030f9f14d33cf9,
+    type: 2}
+  aimPoint: {fileID: 0}
   enemyHealth: 2
 --- !u!114 &114774077823708030
 MonoBehaviour:
@@ -446,6 +455,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 0}
+  researchMaterials: {fileID: 1891820618305510, guid: 086d10671fb9afe479030f9f14d33cf9,
+    type: 2}
+  aimPoint: {fileID: 0}
   enemyHealth: 2
 --- !u!136 &136113747550239610
 CapsuleCollider:

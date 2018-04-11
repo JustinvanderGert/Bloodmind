@@ -1357,7 +1357,8 @@ MonoBehaviour:
   researchMaterials: {fileID: 1891820618305510, guid: 086d10671fb9afe479030f9f14d33cf9,
     type: 2}
   aimPoint: {fileID: 1438285924687382}
-  enemyHealth: 25
+  chanceToDrop: 0
+  enemyHealth: 5
 --- !u!135 &135167455617437684
 SphereCollider:
   m_ObjectHideFlags: 1

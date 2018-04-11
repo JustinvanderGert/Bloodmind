@@ -11,6 +11,36 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1635649799753454}
   m_IsPrefabParent: 1
+--- !u!1 &1038149366175030
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4450581128767588}
+  m_Layer: 0
+  m_Name: WhereToAim
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1052650226003416
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4883354380133886}
+  m_Layer: 0
+  m_Name: WhereToAim (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1076747951511440
 GameObject:
   m_ObjectHideFlags: 0
@@ -49,6 +79,36 @@ GameObject:
   m_Layer: 0
   m_Name: Dogs
   m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1399186271767770
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4120689702551684}
+  m_Layer: 0
+  m_Name: WhereToAim (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1468213377652698
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4750827275625756}
+  m_Layer: 0
+  m_Name: WhereToAim (1)
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +177,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1635649799753454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.56506, y: 1, z: 59.97591}
+  m_LocalPosition: {x: 54.56, y: 1.0480862, z: 18.664629}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4571862667524682}
@@ -136,7 +196,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.7464828, y: -0.048086166, z: -0.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4883354380133886}
   m_Father: {fileID: 4080755635944312}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -149,9 +210,36 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.9335175, y: -0.048086166, z: 1.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4750827275625756}
   m_Father: {fileID: 4080755635944312}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4120689702551684
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1399186271767770}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4571862667524682}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4450581128767588
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038149366175030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4915738586150508}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4571862667524682
 Transform:
@@ -162,8 +250,35 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.1335144, y: -0.048086166, z: 3.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4120689702551684}
   m_Father: {fileID: 4080755635944312}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4750827275625756
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1468213377652698}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4115077310076012}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4883354380133886
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1052650226003416}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4085361974499840}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4915738586150508
@@ -175,7 +290,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.1335144, y: -0.048086166, z: -3.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4450581128767588}
   m_Father: {fileID: 4080755635944312}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -409,7 +525,8 @@ MonoBehaviour:
   waypoint: {fileID: 0}
   researchMaterials: {fileID: 1891820618305510, guid: 086d10671fb9afe479030f9f14d33cf9,
     type: 2}
-  aimPoint: {fileID: 0}
+  aimPoint: {fileID: 1038149366175030}
+  chanceToDrop: 15
   enemyHealth: 2
 --- !u!114 &114209634712138488
 MonoBehaviour:
@@ -425,7 +542,8 @@ MonoBehaviour:
   waypoint: {fileID: 0}
   researchMaterials: {fileID: 1891820618305510, guid: 086d10671fb9afe479030f9f14d33cf9,
     type: 2}
-  aimPoint: {fileID: 0}
+  aimPoint: {fileID: 1399186271767770}
+  chanceToDrop: 15
   enemyHealth: 2
 --- !u!114 &114269197613300414
 MonoBehaviour:
@@ -441,7 +559,8 @@ MonoBehaviour:
   waypoint: {fileID: 0}
   researchMaterials: {fileID: 1891820618305510, guid: 086d10671fb9afe479030f9f14d33cf9,
     type: 2}
-  aimPoint: {fileID: 0}
+  aimPoint: {fileID: 1052650226003416}
+  chanceToDrop: 15
   enemyHealth: 2
 --- !u!114 &114774077823708030
 MonoBehaviour:
@@ -457,7 +576,8 @@ MonoBehaviour:
   waypoint: {fileID: 0}
   researchMaterials: {fileID: 1891820618305510, guid: 086d10671fb9afe479030f9f14d33cf9,
     type: 2}
-  aimPoint: {fileID: 0}
+  aimPoint: {fileID: 1468213377652698}
+  chanceToDrop: 15
   enemyHealth: 2
 --- !u!136 &136113747550239610
 CapsuleCollider:

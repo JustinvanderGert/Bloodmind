@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     public GameObject aimPoint;
     NavMeshAgent agent;
 
+    public int chanceToDrop = 15;
+
     public float enemyHealth;
 
 	void Start ()
@@ -25,7 +27,7 @@ public class Enemy : MonoBehaviour
         if (enemyHealth <= 0)
         {
             int i;
-            i = Random.Range(0, 20);
+            i = Random.Range(0, chanceToDrop);
             if(i == 1)
             {
                 Instantiate(researchMaterials, gameObject.transform.position, gameObject.transform.rotation);

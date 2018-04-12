@@ -73,7 +73,7 @@ public class Turret : MonoBehaviour
             currentTarget = target[0];
             whereToAim = currentTarget.GetComponent<Enemy>().aimPoint;
 
-            Vector3 targetPostition = new Vector3(aimingPart.transform.position.x, rotatingPart.transform.position.y, aimingPart.transform.position.z);
+            Vector3 targetPostition = new Vector3(currentTarget.transform.position.x, rotatingPart.transform.position.y, currentTarget.transform.position.z);
             rotatingPart.transform.LookAt(targetPostition);
 
             aimingPart.transform.LookAt(currentTarget.transform);

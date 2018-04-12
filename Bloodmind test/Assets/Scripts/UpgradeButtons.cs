@@ -15,7 +15,6 @@ public class UpgradeButtons : MonoBehaviour
 
     void Start ()
     {
-        upgradeScreen = GameObject.FindGameObjectWithTag("TurretUpgradeScreen");
         player = GameObject.FindGameObjectWithTag("Player");
         upgradeScreen.SetActive(false);
     }

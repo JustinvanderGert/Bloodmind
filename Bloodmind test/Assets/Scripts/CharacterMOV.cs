@@ -12,6 +12,7 @@ public class CharacterMOV : MonoBehaviour
     public float upDownRange = 60;
     
     public bool menu;
+    public bool research;
 
     private void Start()
     {

@@ -7,6 +7,7 @@ public class Flamethrower : MonoBehaviour
     public GameObject particleSystem;
     public float timeToHurt;
     Collider kilBox;
+    public bool allowed = true;
 
 	void Start ()
     {
@@ -17,7 +18,7 @@ public class Flamethrower : MonoBehaviour
 	
 	void Update ()
     {
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && allowed)
         {
             kilBox.enabled = true;
             particleSystem.SetActive(true);

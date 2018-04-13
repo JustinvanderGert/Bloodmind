@@ -5,13 +5,18 @@ using UnityEngine;
 public class UpgradeButtons : MonoBehaviour
 {
     public List<GameObject> turrets = new List<GameObject>();
-    public GameObject turret;
-    public float range;
 
     public GameObject upgradeScreen;
+    public GameObject fireArrowButton;
+    public GameObject doubleShotButton;
+    public GameObject turret;
+    public float range;
+    public int i = 0;
+
     GameObject player;
 
-    public int i = 0;
+    public bool fireArrowUnlocked;
+    public bool doubleShotUnlocked;
 
     void Start ()
     {
@@ -31,8 +36,17 @@ public class UpgradeButtons : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
-                    upgradeScreen.SetActive(true);
                     player.GetComponent<CharacterMOV>().menu = true;
+                    upgradeScreen.SetActive(true);
+
+                    if (fireArrowUnlocked)
+                    {
+                        fireArrowButton.SetActive(true);
+                    }
+                    if (doubleShotUnlocked)
+                    {
+                        doubleShotButton.SetActive(true);
+                    }
                 }
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
@@ -45,7 +59,7 @@ public class UpgradeButtons : MonoBehaviour
 
     public void DamageUpgradeButton()
     {
-        if (player.GetComponent<Player>().totalGold >= turret.GetComponent<Price>().damageUpgradeCost)
+        if (player.GetComponent<Player>().totalGold >= turret.GetComponent<Price>().damageUpgradeCost && fireArrowUnlocked)
         {
             player.GetComponent<Player>().totalGold -= turret.GetComponent<Price>().damageUpgradeCost;
             turret.GetComponent<Turret>().damageUpgrade[0].SetActive(true);
@@ -59,7 +73,7 @@ public class UpgradeButtons : MonoBehaviour
     }
     public void SpeedUpgradeButton()
     {
-        if(player.GetComponent<Player>().totalGold >= turret.GetComponent<Price>().speedUpgradeCost)
+        if(player.GetComponent<Player>().totalGold >= turret.GetComponent<Price>().speedUpgradeCost && doubleShotUnlocked)
         {
             player.GetComponent<Player>().totalGold -= turret.GetComponent<Price>().speedUpgradeCost;
             turret.GetComponent<Turret>().speedUpgrade[0].SetActive(true);
@@ -71,5 +85,10 @@ public class UpgradeButtons : MonoBehaviour
 
             turret.gameObject.SetActive(false);
         }
+    }
+    public void ExitButton()
+    {
+        player.GetComponent<CharacterMOV>().menu = false;
+        upgradeScreen.SetActive(false);
     }
 }
